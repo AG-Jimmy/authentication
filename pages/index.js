@@ -5,24 +5,24 @@ import { Button,User,Grid,Input,useInput,Container } from '@nextui-org/react';
 export default function Home() {
   
   const {data:session}=useSession()
-  const { value, reset, bindings } = useInput("");
+  // const { value, reset, bindings } = useInput("");
 
-  const validateEmail = (value) => {
-    return value.match(/^[A-Z0-9._-]+@[A-Z]+.[com]{3}$/i)}
+  // const validateEmail = (value) => {
+  //   return value.match(/^[A-Z0-9._-]+@[A-Z]+.[com]{3}$/i)}
 
-  const helper = useMemo(() => {
+  // const helper = useMemo(() => {
 
-    if (!value)
-      return {
-        text: "",
-        color: "",};
+  //   if (!value)
+  //     return {
+  //       text: "",
+  //       color: "",};
         
-    const isValid = validateEmail(value);
-    return {
-      text: isValid ? "Correct email" : "Enter a valid email",
-      color: isValid ? "success" : "error",};
+  //   const isValid = validateEmail(value);
+  //   return {
+  //     text: isValid ? "Correct email" : "Enter a valid email",
+  //     color: isValid ? "success" : "error",};
 
-  }, [value]);
+  // }, [value]);
 
 if (session) {
   return (
@@ -50,7 +50,7 @@ if (session) {
   return(
     
     <Grid.Container  direction="column"  alignContent="center" gap={1} justify="center" style={{height:550}} >
-         <Grid > <h1>LogIn</h1></Grid>
+         {/* <Grid > <h1>LogIn</h1></Grid>
          <Grid> 
                 <form >
          <Grid>
@@ -76,12 +76,12 @@ if (session) {
          </Grid>
          <Grid>
                    <Button>LogIn</Button>
-         </Grid>
+         </Grid> */}
          <Grid>   
                    <Button onClick={()=>signIn()}>signIn</Button>
          </Grid>
-               </form>
-         </Grid>
+               {/* </form>
+         </Grid> */}
 
     </Grid.Container>
   )
